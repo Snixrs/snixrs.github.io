@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Snixrs - Developer, Builder, Innovator. Building the Future, One Line at a Time. Web Development, SaaS, Telegram Bots, and Automation Tools.">
+  <meta name="keywords" content="Snixrs, Developer, Web Development, SaaS, Telegram Bots, Automation, UI Dashboards">
+  <meta name="author" content="Snixrs">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://snixrs.github.io/">
+  <meta property="og:title" content="Snixrs - Developer | Builder | Innovator">
+  <meta property="og:description"
+    content="Building the Future, One Line at a Time. Web Development, SaaS, Telegram Bots, and Automation Tools.">
+  <meta property="og:image" content="assets/images/logo.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Snixrs - Developer | Builder | Innovator">
+  <meta name="twitter:description" content="Building the Future, One Line at a Time.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/sections.css">
+
+  <title>Snixrs - Developer | Builder | Innovator</title>
+</head>
+
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="navbar-brand">
+        <img src="assets/images/logo.svg" alt="Snixrs Logo" class="navbar-logo">
+        <span class="navbar-title">Snixrs</span>
+      </a>
+
+      <ul class="navbar-nav">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <!--li><a href="#testimonials" class="nav-link">Testimonials</a></li-->
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="#contact" class="btn btn-primary btn-sm md:hidden">Connect</a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#portfolio" class="nav-link">Portfolio</a>
+    <a href="#services" class="nav-link">Services</a>
+    <!--a href="#testimonials" class="nav-link">Testimonials</a-->
+    <a href="#blog" class="nav-link">Blog</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-background">
+      <canvas id="particles-canvas"></canvas>
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="hero-content reveal">
+      <img src="assets/images/logo.svg" alt="Snixrs Logo" class="hero-logo">
+      <h1 class="hero-title">Snixrs</h1>
+      <p class="hero-tagline">Building the Future, One Line at a Time</p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn btn-primary btn-lg">
+          <i class="fas fa-briefcase"></i>
+          View Portfolio
+        </a>
+        <a href="#contact" class="btn btn-secondary btn-lg">
+          <i class="fas fa-envelope"></i>
+          Contact Me
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"><i class="fas fa-user"></i> About Me</span>
+        <h2 class="section-title">Who Am I?</h2>
+        <p class="section-description">Passionate developer crafting digital experiences that matter.</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-image reveal-left">
+          <img src="assets/images/logo.svg" alt="Snixrs" class="about-logo">
+        </div>
+
+        <div class="about-text reveal-right">
+          <h3>Programmer | <span class="text-gradient">Indie Hacker</span></h3>
+          <p class="about-bio">
+            <!-- PLACEHOLDER: Replace with your bio -->
+            Hello! I'm Snixrs, a passionate developer dedicated to building innovative digital solutions.
+            With expertise in software development, SaaS products, cyber security, and automation, I transform ideas
+            into
+            powerful, scalable applications. My mission is to create technology that makes a difference.
+          </p>
+          <p class="about-bio">
+            When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+            projects, and building communities of like-minded developers.
+          </p>
+
+          <h4 class="text-primary mt-6 mb-4">Core Skills</h4>
+          <div class="skills-list">
+            <span class="skill-tag">Full-Stack Development</span>
+            <span class="skill-tag">React / React Native</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">Telegram Bots</span>
+            <span class="skill-tag">UI/UX Design</span>
+            <span class="skill-tag">Database Design</span>
+            <span class="skill-tag">Linux / Kali Linux</span>
+            <span class="skill-tag">Indie Hacker</span>
+            <span class="skill-tag">SaaS Development</span>
+            <span class="skill-tag">Building Communities</span>
+            <span class="skill-tag">Building Products</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section" id="stats">
+    <div class="container">
+      <div class="stats-grid stagger-reveal">
+        <div class="stat-card">
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="5">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="4">0</div>
+          <div class="stat-label">Bots Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="500">0</div>
+          <div class="stat-label">Community Members</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"><i class="fas fa-code"></i> Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-description">A showcase of my best work across different categories.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-group reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="bots">Bots</button>
+        <button class="filter-btn" data-filter="saas">SaaS</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Project 1 -->
+        <div class="project-card reveal" data-category="web">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder"><i class="fas fa-globe"></i></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-description">A full-featured online store with admin panel, inventory management,
+              and analytics dashboard.</p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Ajax</span>
+              <span>jQuery</span>
+              <span>Font Awesome</span>
+            </div>
+            <div class="project-links">
+              <a href="https://eggenreps.de" target="_blank" class="project-link"><i
+                  class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal" data-category="bots">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder"><i class="fab fa-telegram"></i></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Crypto Trading Bot</h3>
+            <p class="project-description">Automated trading bot with real-time market analysis, alerts.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>JSON</span>
+            </div>
+            <div class="project-links">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal" data-category="saas">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder"><i class="fas fa-chart-line"></i></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Long-Term Goals Planner</h3>
+            <p class="project-description">Long-term goals planner with real-time data visualization, custom reports,
+              user and admin dashboard.</p>
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Font Awesome</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Coming Soon</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal" data-category="bots">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder"><i class="fas fa-graduation-cap"></i></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Educational Platform</h3>
+            <p class="project-description">Educational platform with 3 telegram bots, user profiles, automated quizes,
+              analytics, reports and admin dashboard.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>telegram-bot-api</span>
+              <span>JSON</span>
+              <span>MySQL</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Font Awesome</span>
+              <span>React Native</span>
+            </div>
+            <div class="project-links">
+              <a href="https://t.me/StudnixBot" class="project-link"><i class="fas fa-external-link-alt"></i> Live
+                Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal" data-category="web">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder"><i class="fas fa-robot"></i></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">E-Commerce Website</h3>
+            <p class="project-description">E-Commerce website with user profiles</p>
+            <div class="project-tech">
+              <span>Wordpress</span>
+              <span>WooCommerce</span>
+              <span>WP Plugins</span>
+            </div>
+            <div class="project-links">
+              <a href="https://havnix.ct.ws" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"><i class="fas fa-cogs"></i> Services</span>
+        <h2 class="section-title">What I Offer</h2>
+        <p class="section-description">Professional services tailored to your needs.</p>
+      </div>
+
+      <div class="services-grid stagger-reveal">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-description">Custom websites and web applications built with modern technologies. Fast,
+            responsive, and SEO-optimized.</p>
+          <span class="service-price">Starting at $500</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3 class="service-title">SaaS MVP Building</h3>
+          <p class="service-description">Transform your startup idea into a working product. Full-stack development from
+            concept to launch.</p>
+          <span class="service-price">Starting at $2,000</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fab fa-telegram"></i></div>
+          <h3 class="service-title">Telegram Bots</h3>
+          <p class="service-description">Custom Telegram bots for automation, community management, notifications, and
+            more.</p>
+          <span class="service-price">Starting at $300</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cog"></i></div>
+          <h3 class="service-title">Automation Tools</h3>
+          <p class="service-description">Streamline your workflows with custom automation scripts and integrations.</p>
+          <span class="service-price">Starting at $400</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-palette"></i></div>
+          <h3 class="service-title">UI Dashboards</h3>
+          <p class="service-description">Beautiful, intuitive admin panels and dashboards for your applications.</p>
+          <span class="service-price">Starting at $600</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-comments"></i></div>
+          <h3 class="service-title">Consulting</h3>
+          <p class="service-description">Technical consulting and code reviews to help you make the right decisions.</p>
+          <span class="service-price">$100/hour</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="section" id="techstack">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"><i class="fas fa-layer-group"></i> Tech Stack</span>
+        <h2 class="section-title">Tools & Technologies</h2>
+        <p class="section-description">The technologies I use to bring ideas to life.</p>
+      </div>
+
+      <div class="techstack-grid stagger-reveal">
+        <div class="techstack-item tooltip" data-tooltip="JavaScript">
+          <i class="fab fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="PHP">
+          <i class="fab fa-php"></i>
+          <span>PHP</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Python">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="React">
+          <i class="fab fa-react"></i>
+          <span>React</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="React Native">
+          <i class="fab fa-react"></i>
+          <span>React Native</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Node.js">
+          <i class="fab fa-node-js"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="HTML5">
+          <i class="fab fa-html5"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="CSS3">
+          <i class="fab fa-css3-alt"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Git">
+          <i class="fab fa-git-alt"></i>
+          <span>Git</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Unity">
+          <i class="fab fa-unity"></i>
+          <span>Unity</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="MySQL">
+          <i class="fas fa-database"></i>
+          <span>MySQL</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Linux">
+          <i class="fab fa-linux"></i>
+          <span>Linux</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Firebase">
+          <i class="fas fa-database"></i>
+          <span>Firebase</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Bootstrap">
+          <i class="fab fa-bootstrap"></i>
+          <span>Bootstrap</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Figma">
+          <i class="fab fa-figma"></i>
+          <span>Figma</span>
+        </div>
+        <div class="techstack-item tooltip" data-tooltip="Hosting">
+          <i class="fas fa-server"></i>
+          <span>Hosting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <!--section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"><i class="fas fa-quote-left"></i> Testimonials</span>
+        <h2 class="section-title">What Clients Say</h2>
+        <p class="section-description">Feedback from people I've worked with.</p>
+      </div>
+
+      <div class="testimonials-grid stagger-reveal">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Snixrs delivered beyond expectations. The bot they built for our community has
+            become an essential tool. Professional, responsive, and skilled!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JD</div>
+            <div>
+              <div class="testimonial-name">John Doe</div>
+              <div class="testimonial-role">Community Manager</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Outstanding work on our SaaS dashboard. The attention to detail and user
+            experience is exceptional. Highly recommend!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <div class="testimonial-name">Sarah Miller</div>
+              <div class="testimonial-role">Startup Founder</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">The automation tools have saved us countless hours. Snixrs understood our needs
+            perfectly and delivered a robust solution.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MK</div>
+            <div>
+              <div class="testimonial-name">Mike Johnson</div>
+              <div class="testimonial-role">Operations Director</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section-->
+
+  <!-- Blog Section -->
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"><i class="fas fa-pen"></i> Blog</span>
+        <h2 class="section-title">Latest Insights</h2>
+        <p class="section-description">Thoughts, tutorials, and industry insights.</p>
+      </div>
+
+      <div class="blog-grid stagger-reveal">
+        <article class="blog-card">
+          <div class="blog-thumbnail">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-date">January 15, 2026</span>
+            <h3 class="blog-title">Building Your First Telegram Bot</h3>
+            <p class="blog-excerpt">A comprehensive guide to creating powerful Telegram bots using Python and the
+              Telegram Bot API.</p>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-thumbnail">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-date">January 8, 2026</span>
+            <h3 class="blog-title">MVP Development Best Practices</h3>
+            <p class="blog-excerpt">Learn how to build and launch your MVP quickly without sacrificing quality or user
+              experience.</p>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-thumbnail">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-date">December 28, 2025</span>
+            <h3 class="blog-title">Modern UI Design Trends 2026</h3>
+            <p class="blog-excerpt">Exploring the latest design trends including glassmorphism, dark modes, and
+              micro-animations.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="section" id="community">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"><i class="fas fa-users"></i> Community</span>
+        <h2 class="section-title">Join the Community</h2>
+        <p class="section-description">Connect with developers and enthusiasts.</p>
+      </div>
+
+      <div class="community-cards stagger-reveal">
+        <div class="community-card">
+          <div class="community-icon discord">
+            <i class="fab fa-discord"></i>
+          </div>
+          <div class="community-info">
+            <h4>Discord Server</h4>
+            <p>Join our Discord for discussions, help, and exclusive content. Connect with fellow developers!</p>
+            <a href="https://discord.gg/acZFS6nBW6" target="_blank" class="btn btn-primary btn-sm">
+              <i class="fab fa-discord"></i> Join Discord
+            </a>
+          </div>
+        </div>
+
+        <div class="community-card">
+          <div class="community-icon reddit">
+            <i class="fab fa-reddit"></i>
+          </div>
+          <div class="community-info">
+            <h4>Reddit Community</h4>
+            <p>Get updates, tips, and connect on Reddit. Quick support and community engagement!</p>
+            <a href="https://www.reddit.com/r/Snixrs/" target="_blank" class="btn btn-primary btn-sm">
+              <i class="fab fa-reddit"></i> Join Reddit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section" id="cta">
+    <div class="container">
+      <div class="cta-banner reveal-scale">
+        <div class="cta-content">
+          <h2 class="cta-title">Let's Build Something <span class="text-gradient">Amazing</span> Together</h2>
+          <p class="cta-description">Have a project in mind? Let's turn your ideas into reality. I'm always excited to
+            work on innovative projects.</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="fas fa-paper-plane"></i> Start a Project
+            </a>
+            <a href="#portfolio" class="btn btn-secondary btn-lg">
+              <i class="fas fa-eye"></i> View My Work
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"><i class="fas fa-envelope"></i> Contact</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-description">Have a question or want to work together?</p>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info reveal-left">
+          <h3>Let's Connect</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+
+          <div class="contact-email">
+            <i class="fas fa-envelope text-accent"></i>
+            <span id="emailAddress">snixrs@outlook.com</span>
+            <button class="copy-btn" id="copyEmail" onclick="copyEmail()">Copy</button>
+          </div>
+
+          <h4 class="mb-4">Find Me On</h4>
+          <div class="social-links">
+            <a href="https://github.com/Snixrs" target="_blank" class="social-link tooltip" data-tooltip="GitHub"
+              aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://x.com/Snixrs_" target="_blank" class="social-link tooltip" data-tooltip="Twitter/X"
+              aria-label="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://discord.gg/acZFS6nBW6" target="_blank" class="social-link tooltip" data-tooltip="Discord"
+              aria-label="Discord">
+              <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://t.me/Snixrs" target="_blank" class="social-link tooltip" data-tooltip="Telegram"
+              aria-label="Telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/Snixrs" target="_blank" class="social-link tooltip"
+              data-tooltip="LinkedIn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.reddit.com/u/Snixrs" target="_blank" class="social-link tooltip" data-tooltip="Reddit"
+              aria-label="Reddit">
+              <i class="fab fa-reddit"></i>
+            </a>
+            <a href="https://www.tiktok.com/@Snixrs_" target="_blank" class="social-link tooltip" data-tooltip="TikTok"
+              aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form reveal-right">
+          <form id="contactForm" class="card">
+            <div class="input-group">
+              <label class="input-label" for="name">Your Name</label>
+              <input type="text" id="name" class="input" placeholder="John Doe" required>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="email">Your Email</label>
+              <input type="email" id="email" class="input" placeholder="john@example.com" required>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="subject">Subject</label>
+              <input type="text" id="subject" class="input" placeholder="Project Inquiry">
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="message">Message</label>
+              <textarea id="message" class="input textarea" placeholder="Tell me about your project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="assets/images/logo.svg" alt="Snixrs Logo" class="footer-logo">
+          <span class="footer-text">© 2026 Snixrs. All rights reserved.</span>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="#" class="social-link" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#about" class="footer-link">About</a>
+          <a href="#portfolio" class="footer-link">Portfolio</a>
+          <a href="#services" class="footer-link">Services</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
