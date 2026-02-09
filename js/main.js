@@ -256,24 +256,46 @@ function copyEmail() {
 class ContactForm {
     constructor() {
         this.form = document.getElementById('contactForm');
+        this.status = document.getElementById('formStatus');
         if (this.form) {
             this.form.addEventListener('submit', (e) => this.handleSubmit(e));
         }
     }
 
-    handleSubmit(e) {
+    async handleSubmit(e) {
         e.preventDefault();
 
-        // Get form data
         const formData = new FormData(this.form);
-        const data = Object.fromEntries(formData);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
-        // For GitHub Pages (static), show a message
-        // In production, you'd send this to a service like Formspree, Netlify Forms, etc.
-        alert('Thank you for your message! Since this is a static site, please send your message directly to the email address shown above.');
+        this.status.innerHTML = '<span class="text-accent">Sending message...</span>';
 
-        // Reset form
-        this.form.reset();
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            });
+
+            const result = await response.json();
+
+            if (response.status === 200) {
+                this.status.innerHTML = '<span class="text-success">Message sent successfully!</span>';
+                this.form.reset();
+            } else {
+                this.status.innerHTML = `<span class="text-error">${result.message}</span>`;
+            }
+        } catch (error) {
+            this.status.innerHTML = '<span class="text-error">Something went wrong. Please try again later.</span>';
+        }
+
+        setTimeout(() => {
+            this.status.innerHTML = "";
+        }, 5000);
     }
 }
 

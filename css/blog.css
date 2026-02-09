@@ -1,0 +1,194 @@
+/* ==========================================================================
+   BLOG STYLES - Styles for blog index and post layout
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   BLOG INDEX LAYOUT
+   ------------------------------------------------------------------------- */
+
+.blog-hero {
+    padding-block: var(--space-32) var(--space-16);
+    background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 50%);
+    text-align: center;
+}
+
+.blog-search-container {
+    max-width: 600px;
+    margin: var(--space-8) auto;
+    position: relative;
+}
+
+.blog-search-input {
+    width: 100%;
+    padding: var(--space-4) var(--space-12) var(--space-4) var(--space-6);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--text-primary);
+}
+
+.blog-search-icon {
+    position: absolute;
+    right: var(--space-6);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------------------
+   BLOG POST CONTENT
+   ------------------------------------------------------------------------- */
+
+.post-container {
+    max-width: 800px;
+    margin-inline: auto;
+    padding-block: var(--space-20);
+}
+
+.post-header {
+    margin-bottom: var(--space-12);
+    text-align: center;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-4);
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.post-title {
+    font-size: var(--text-5xl);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-tight);
+}
+
+.post-featured-image {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, var(--primary-900), var(--bg-dark));
+    border-radius: var(--radius-2xl);
+    margin-bottom: var(--space-12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.post-featured-image i {
+    font-size: 8rem;
+    color: var(--primary);
+    opacity: 0.3;
+}
+
+/* -------------------------------------------------------------------------
+   ARTICLE BODY TYPOGRAPHY
+   ------------------------------------------------------------------------- */
+
+.post-content {
+    color: var(--text-secondary);
+    line-height: var(--leading-loose);
+    font-size: var(--text-lg);
+}
+
+.post-content h2 {
+    margin-top: var(--space-12);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+}
+
+.post-content h3 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+    color: var(--text-primary);
+}
+
+.post-content p {
+    margin-bottom: var(--space-6);
+}
+
+.post-content ul,
+.post-content ol {
+    margin-bottom: var(--space-6);
+    padding-left: var(--space-6);
+}
+
+.post-content li {
+    margin-bottom: var(--space-2);
+}
+
+.post-content blockquote {
+    border-left: 4px solid var(--primary);
+    background: var(--bg-card);
+    padding: var(--space-6) var(--space-8);
+    margin-bottom: var(--space-8);
+    border-radius: var(--radius-lg);
+    font-style: italic;
+}
+
+.post-content code {
+    font-family: var(--font-mono);
+    background: var(--bg-card);
+    padding: 0.2em 0.4em;
+    border-radius: var(--radius-sm);
+    font-size: 0.9em;
+}
+
+.post-content pre {
+    background: var(--bg-darker);
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    overflow-x: auto;
+    margin-bottom: var(--space-8);
+    border: 1px solid var(--border-color);
+}
+
+.post-content pre code {
+    background: transparent;
+    padding: 0;
+    display: block;
+}
+
+/* -------------------------------------------------------------------------
+   POST FOOTER
+   ------------------------------------------------------------------------- */
+
+.post-footer {
+    margin-top: var(--space-16);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--border-color);
+}
+
+.share-post {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-12);
+}
+
+.back-to-blog {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--primary-light);
+    margin-bottom: var(--space-8);
+    transition: transform 0.3s ease;
+}
+
+.back-to-blog:hover {
+    transform: translateX(-5px);
+}

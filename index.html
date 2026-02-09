@@ -63,7 +63,7 @@
         <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <!--li><a href="#testimonials" class="nav-link">Testimonials</a></li-->
-        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
@@ -84,7 +84,7 @@
     <a href="#portfolio" class="nav-link">Portfolio</a>
     <a href="#services" class="nav-link">Services</a>
     <!--a href="#testimonials" class="nav-link">Testimonials</a-->
-    <a href="#blog" class="nav-link">Blog</a>
+    <a href="blog.html" class="nav-link">Blog</a>
     <a href="#contact" class="nav-link">Contact</a>
   </div>
 
@@ -516,44 +516,51 @@
       <div class="section-header reveal">
         <span class="section-badge"><i class="fas fa-pen"></i> Blog</span>
         <h2 class="section-title">Latest Insights</h2>
-        <p class="section-description">Thoughts, tutorials, and industry insights.</p>
+        <p class="section-description">Thoughts, tutorials, and industry insights. <a href="blog.html" class="link">View
+            all articles</a></p>
       </div>
 
       <div class="blog-grid stagger-reveal">
         <article class="blog-card">
-          <div class="blog-thumbnail">
-            <i class="fas fa-robot"></i>
-          </div>
-          <div class="blog-content">
-            <span class="blog-date">January 15, 2026</span>
-            <h3 class="blog-title">Building Your First Telegram Bot</h3>
-            <p class="blog-excerpt">A comprehensive guide to creating powerful Telegram bots using Python and the
-              Telegram Bot API.</p>
-          </div>
+          <a href="blog/building-telegram-bots.html">
+            <div class="blog-thumbnail">
+              <i class="fab fa-telegram"></i>
+            </div>
+            <div class="blog-content">
+              <span class="blog-date">January 15, 2026</span>
+              <h3 class="blog-title">Building Your First Telegram Bot</h3>
+              <p class="blog-excerpt">A comprehensive guide to creating powerful Telegram bots using Python and the
+                Telegram Bot API.</p>
+            </div>
+          </a>
         </article>
 
         <article class="blog-card">
-          <div class="blog-thumbnail">
-            <i class="fas fa-rocket"></i>
-          </div>
-          <div class="blog-content">
-            <span class="blog-date">January 8, 2026</span>
-            <h3 class="blog-title">MVP Development Best Practices</h3>
-            <p class="blog-excerpt">Learn how to build and launch your MVP quickly without sacrificing quality or user
-              experience.</p>
-          </div>
+          <a href="blog.html">
+            <div class="blog-thumbnail">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="blog-content">
+              <span class="blog-date">January 8, 2026</span>
+              <h3 class="blog-title">MVP Development Best Practices</h3>
+              <p class="blog-excerpt">Learn how to build and launch your MVP quickly without sacrificing quality or user
+                experience.</p>
+            </div>
+          </a>
         </article>
 
         <article class="blog-card">
-          <div class="blog-thumbnail">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <div class="blog-content">
-            <span class="blog-date">December 28, 2025</span>
-            <h3 class="blog-title">Modern UI Design Trends 2026</h3>
-            <p class="blog-excerpt">Exploring the latest design trends including glassmorphism, dark modes, and
-              micro-animations.</p>
-          </div>
+          <a href="blog.html">
+            <div class="blog-thumbnail">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="blog-content">
+              <span class="blog-date">December 28, 2025</span>
+              <h3 class="blog-title">Modern UI Design Trends 2026</h3>
+              <p class="blog-excerpt">Exploring the latest design trends including glassmorphism, dark modes, and
+                micro-animations.</p>
+            </div>
+          </a>
         </article>
       </div>
     </div>
@@ -673,27 +680,34 @@
         </div>
 
         <div class="contact-form reveal-right">
-          <form id="contactForm" class="card">
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="card">
+            <!-- Web3Forms Access Key - You will need to get your own at https://web3forms.com/ -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="from_name" value="Snixrs Portfolio Contact">
+            <input type="hidden" name="subject" value="New Message from Snixrs Portfolio">
+
             <div class="input-group">
               <label class="input-label" for="name">Your Name</label>
-              <input type="text" id="name" class="input" placeholder="John Doe" required>
+              <input type="text" id="name" name="name" class="input" placeholder="John Doe" required>
             </div>
             <div class="input-group">
               <label class="input-label" for="email">Your Email</label>
-              <input type="email" id="email" class="input" placeholder="john@example.com" required>
+              <input type="email" id="email" name="email" class="input" placeholder="john@example.com" required>
             </div>
             <div class="input-group">
-              <label class="input-label" for="subject">Subject</label>
-              <input type="text" id="subject" class="input" placeholder="Project Inquiry">
+              <label class="input-label" for="user_subject">Subject</label>
+              <input type="text" id="user_subject" name="user_subject" class="input" placeholder="Enter your subject">
             </div>
             <div class="input-group">
               <label class="input-label" for="message">Message</label>
-              <textarea id="message" class="input textarea" placeholder="Tell me about your project..."
+              <textarea id="message" name="message" class="input textarea" placeholder="Hello, Let's work together..."
                 required></textarea>
             </div>
+
             <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
               <i class="fas fa-paper-plane"></i> Send Message
             </button>
+            <div id="formStatus" class="mt-4 text-center"></div>
           </form>
         </div>
       </div>
