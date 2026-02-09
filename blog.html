@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Snixrs Blog - Insights on Web Development, SaaS, Cybersecurity, and Automation.">
+    <meta name="keywords" content="Snixrs, Blog, Web Development, SaaS, Programming, Tutorials">
+    <meta name="author" content="Snixrs">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snixrs.github.io/blog.html">
+    <meta property="og:title" content="Blog - Snixrs">
+    <meta property="og:description" content="Insights on Web Development, SaaS, Cybersecurity, and Automation.">
+
     <title>Blog - Snixrs</title>
 
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -50,6 +59,15 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+    </div>
+
     <!-- Blog Hero -->
     <header class="blog-hero">
         <div class="container reveal">
@@ -57,7 +75,7 @@
             <p class="hero-tagline">Exploring technology, code, and digital innovation.</p>
 
             <div class="blog-search-container">
-                <input type="text" class="blog-search-input" placeholder="Search articles...">
+                <input type="text" id="blogSearch" class="blog-search-input" placeholder="Search articles...">
                 <i class="fas fa-search blog-search-icon"></i>
             </div>
         </div>
@@ -66,9 +84,10 @@
     <!-- Blog Content -->
     <main class="section">
         <div class="container">
-            <div class="blog-grid stagger-reveal">
+            <div class="blog-grid stagger-reveal" id="blogGrid">
                 <!-- Article 1 -->
-                <article class="blog-card">
+                <article class="blog-card" data-title="building your first telegram bot"
+                    data-tags="python telegram programming tutorial">
                     <a href="blog/building-telegram-bots.html">
                         <div class="blog-thumbnail">
                             <i class="fab fa-telegram"></i>
@@ -78,13 +97,13 @@
                             <h3 class="blog-title">Building Your First Telegram Bot</h3>
                             <p class="blog-excerpt">A comprehensive guide to creating powerful Telegram bots using
                                 Python and the Telegram Bot API.</p>
-                            <span class="link mt-4 inline-block">Read More <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
                 </article>
 
                 <!-- Article 2 -->
-                <article class="blog-card">
+                <article class="blog-card" data-title="mvp development best practices"
+                    data-tags="saas startup development business">
                     <a href="blog/mvp-development.html">
                         <div class="blog-thumbnail">
                             <i class="fas fa-rocket"></i>
@@ -94,13 +113,13 @@
                             <h3 class="blog-title">MVP Development Best Practices</h3>
                             <p class="blog-excerpt">Learn how to build and launch your MVP quickly without sacrificing
                                 quality or user experience.</p>
-                            <span class="link mt-4 inline-block">Read More <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
                 </article>
 
                 <!-- Article 3 -->
-                <article class="blog-card">
+                <article class="blog-card" data-title="modern ui design trends 2026"
+                    data-tags="design ui ux web css frontend">
                     <a href="blog/ui-trends-2026.html">
                         <div class="blog-thumbnail">
                             <i class="fas fa-paint-brush"></i>
@@ -110,10 +129,15 @@
                             <h3 class="blog-title">Modern UI Design Trends 2026</h3>
                             <p class="blog-excerpt">Exploring the latest design trends including glassmorphism, dark
                                 modes, and micro-animations.</p>
-                            <span class="link mt-4 inline-block">Read More <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
                 </article>
+            </div>
+
+            <!-- No results message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search fa-2x mb-4" style="opacity: 0.5;"></i>
+                <p>No articles found matching your search.</p>
             </div>
         </div>
     </main>
@@ -140,6 +164,40 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Blog Search Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('blogSearch');
+            const blogGrid = document.getElementById('blogGrid');
+            const noResults = document.getElementById('noResults');
+            const blogCards = blogGrid.querySelectorAll('.blog-card');
+
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                blogCards.forEach(card => {
+                    const title = card.dataset.title || '';
+                    const tags = card.dataset.tags || '';
+                    const text = title + ' ' + tags;
+
+                    if (query === '' || text.includes(query)) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0 && query !== '') {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
