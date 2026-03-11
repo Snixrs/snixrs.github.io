@@ -80,4 +80,7 @@ MIT License - Feel free to use for personal or commercial projects.
 
 ---
 
-Built with 💜 by Snixrs
+---
+
+Built with 💜 by [Snixrs](https://snixrs.github.io)  
+CEO & Founder of [Roadvix](https://roadvix.com)
