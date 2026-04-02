@@ -39,7 +39,7 @@ ol {
 
 /* Remove default link styles */
 a {
-    color: inherit;
+    color: var(--text-primary);
     text-decoration: none;
 }
 
