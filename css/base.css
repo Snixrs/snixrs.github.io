@@ -39,7 +39,7 @@ ol {
 
 /* Remove default link styles */
 a {
-    color: var(--text-primary);
+    color: var(--primary);
     text-decoration: none;
 }
 
