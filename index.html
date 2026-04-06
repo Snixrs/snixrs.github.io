@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+  <script>
+    if (location.hostname.startsWith("www.")) {
+      location.href = location.href.replace("www.", "");
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
@@ -44,10 +49,10 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.min.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/base.min.css">
+  <link rel="stylesheet" href="css/components.min.css">
+  <link rel="stylesheet" href="css/animations.min.css">
+  <link rel="stylesheet" href="css/sections.min.css">
 
   <title>Snixrs | Full‑Stack Developer, SaaS Builder & Indie Hacker</title>
   <link rel="canonical" href="https://snixrs.github.io/">
